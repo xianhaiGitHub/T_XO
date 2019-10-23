@@ -9,6 +9,7 @@
             padding:0;
         }
         .text{
+            color: #7c67ff;
             width:100%;
             height: 1000px;
             font-size: 50px;
@@ -19,22 +20,18 @@
             text-align: center;
         }
         p span {
-            color: #23d8ff;
+            color: #1e1a7a;
+            font-size: 50px;
         }
         p span.time {
-            color: black
+            color: black;
         }
         body{
             padding-top:200px;
-            /*background-image: url(https://goss4.cfp.cn/creative/vcg/400/new/VCG41N696224474.jpg);*/
-            background-repeat:no-repeat;
-            background-size:100% 100%;/*按比例缩放*/
+            background-image: url(./img/love.png);
+            background-repeat:repeat;
+            background-size:auto;/*按比例缩放*/
             background-position: center;
-        }
-        .firworks{
-            width: 6px;
-            height: 6px;
-            position: absolute;
         }
     </style>
 </head>
@@ -49,7 +46,7 @@
         return n >= 0 && n < 10 ? '0' + n : '' + n;
     }
     function getDate() {
-        var oDate = new Date();//获取日期对象
+        var oDate = new Date();
         var oldTime = oDate.getTime();//现在距离1970年的毫秒数
         var newDate = new Date('2019/5/28 00:00:00').getTime();
         var second = Math.floor((oldTime - newDate) / 1000);//现在时间距离之前某个时间的秒数
