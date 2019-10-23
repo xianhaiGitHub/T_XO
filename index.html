@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>时间累计</title>
+    <title>浪漫的时间累计</title>
     <style>
         *{
             margin: 0;
@@ -13,10 +13,6 @@
             height: 1000px;
             font-size: 50px;
             text-align: center;
-            background-image: url(https://goss4.cfp.cn/creative/vcg/400/new/VCG41N696224474.jpg?x-oss-process=image/format,webp);
-            background-repeat:no-repeat;
-            background-size:100% 100%;/*按比例缩放*/
-            background-position: center;
         }
         p {
             font-size: 40px;
@@ -29,7 +25,11 @@
             color: black
         }
         body{
-            /*padding-top:200px;*/
+            padding-top:200px;
+            /*background-image: url(https://goss4.cfp.cn/creative/vcg/400/new/VCG41N696224474.jpg);*/
+            background-repeat:no-repeat;
+            background-size:100% 100%;/*按比例缩放*/
+            background-position: center;
         }
         .firworks{
             width: 6px;
@@ -43,27 +43,26 @@
     愿我如星君如月，夜夜流光相皎洁,
     从事Java开发工已经有
     <p><span></span></p></div>
-
 <script>
     var oSpan = document.getElementsByTagName('span')[0];
-    function tow(n) {
+    function time(n) {
         return n >= 0 && n < 10 ? '0' + n : '' + n;
     }
     function getDate() {
         var oDate = new Date();//获取日期对象
         var oldTime = oDate.getTime();//现在距离1970年的毫秒数
-        var newDate = new Date('2018/5/28 00:00:00').getTime();
-        var second = Math.floor((oldTime - newDate) / 1000);//未来时间距离现在的秒数
+        var newDate = new Date('2019/5/28 00:00:00').getTime();
+        var second = Math.floor((oldTime - newDate) / 1000);//现在时间距离之前某个时间的秒数
         var day = Math.floor(second / 86400);//整数部分代表的是天；一天有24*60*60=86400秒 ；
         second = second % 86400;//余数代表剩下的秒数；
         var hour = Math.floor(second / 3600);//整数部分代表小时；
         second %= 3600; //余数代表 剩下的秒数；
         var minute = Math.floor(second / 60);
         second %= 60;
-        var str = tow(day) + '<span class="time">天</span>'
-            + tow(hour) + '<span class="time">小时</span>'
-            + tow(minute) + '<span class="time">分钟</span>'
-            + tow(second) + '<span class="time">秒</span>';
+        var str = time(day) + '<span class="time">天</span>'
+            + time(hour) + '<span class="time">小时</span>'
+            + time(minute) + '<span class="time">分钟</span>'
+            + time(second) + '<span class="time">秒</span>';
         oSpan.innerHTML = str;
     }
     getDate();
