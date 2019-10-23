@@ -2,355 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="Keywords" content="关键字,关键词">
-    <meta name="Description" content="描述和简介">
-    <title>Title</title>
-    <style type="text/css">
-        *{margin:0;padding:0;}
-        body,ul,li,ol,dl,dd,p,h1,h2,h3,h4,h5,h6{ margin:0;}
-        a{text-decoration:none;}
-        img{border:none;}
-        ol,ul{list-style:none;}
-        #box{
-            position: relative;
-            margin: 50px auto;
-            padding: 20px;
-            overflow: hidden;
-            width: 700px;
-            height: 500px;
-            background: pink;
-            color: #2d10ef;
+    <title>时间累计</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
         }
-        #scroll{
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 15px;
-            height: 540px;
-            background: #ddd;
-            z-index: 1;
+        .text{
+            font-size: 60px;
         }
-        #bar{
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 14px;
-            height: 30px;
-            background: #333;
-            cursor: pointer;
+        p {
+            font-size: 80px;
+            text-align: center;
         }
-        #content{
-            position: absolute;
-            top: 0;
-            left: 0;
-            padding: 20px;
+        p span {
+            color: #7c67ff;
         }
-	</style>
+        p span.time {
+            color: black
+        }
+        body{
+            padding-top:200px;
+            background: #36fff5;
+            /*background-image: url(http://www.pptbz.com/pptpic/UploadFiles_6909/201210/2012100607371752.jpg);*/
+        }
+    </style>
 </head>
 <body>
-    <div id="box">
-        <div id="scroll">
-            <div id="bar"></div>
-        </div>
-        <div id="content">
-            <h2>阿甘正传</h2>
-            <br>
-            <p class="pbold">1、Life was like a box of chocolates, you never know what you're going to get.</p>
-            <p>生命就像一盒巧克力，结果往往出人意料。</p>
-            <p class="pbold">2、Stupid is as stupid does.</p>
-            <p>蠢人做蠢事，也可理解为傻人有傻福。</p>
-            <p class="pbold">3、Miracles happen every day.</p>
-            <p>奇迹每天都在发生。</p>
-            <p class="pbold">4、it made me look like a duck in water.</p>
-            <p>它让我如鱼得水。</p>
-            <p class="pbold">5、I don't know if we each have a destiny, or if we're all just floating around accidental—like on a breeze.</p>
-            <p>我不懂我们是否有着各自的命运，还是只是到处随风飘荡。</p>
-            <p class="pbold">6、Death is just a part of life, something we're all destined to do.</p>
-            <p>死亡是生命的一部分，是我们注定要做的一件事。</p>
-            <p class="pbold">7、You have got to put the past behind you before you can move on.</p>
-            <p>放下包袱，继续前进。</p>
-            <p class="pbold">8、It was like just before the sun goes to bed down on the bayou. There was a million sparkles on the river.</p>
-            <p>就像太阳在落山前映射在河口上，有无数的亮点在闪闪发光。</p>
-            <p class="pbold">9、If there is anything you need, I will not be far away.</p>
-            <p>只要你需要，我就在这里。</p>
-            <p class="pbold">10、I am a man of my word.</p>
-            <p>我是信守承诺的人。</p>
-            <p class="pbold">11、There is one small step for a man,a giant leap for mankind.</p>
-            <p>某人的一小步就是人类的一大步。</p>
-            <p class="pbold">1、Life was like a box of chocolates, you never know what you're going to get.</p>
-            <p>生命就像一盒巧克力，结果往往出人意料。</p>
-            <p class="pbold">2、Stupid is as stupid does.</p>
-            <p>蠢人做蠢事，也可理解为傻人有傻福。</p>
-            <p class="pbold">3、Miracles happen every day.</p>
-            <p>奇迹每天都在发生。</p>
-            <p class="pbold">4、it made me look like a duck in water.</p>
-            <p>它让我如鱼得水。</p>
-            <p class="pbold">5、I don't know if we each have a destiny, or if we're all just floating around accidental—like on a breeze.</p>
-            <p>我不懂我们是否有着各自的命运，还是只是到处随风飘荡。</p>
-            <p class="pbold">6、Death is just a part of life, something we're all destined to do.</p>
-            <p>死亡是生命的一部分，是我们注定要做的一件事。</p>
-            <p class="pbold">7、You have got to put the past behind you before you can move on.</p>
-            <p>放下包袱，继续前进。</p>
-            <p class="pbold">8、It was like just before the sun goes to bed down on the bayou. There was a million sparkles on the river.</p>
-            <p>就像太阳在落山前映射在河口上，有无数的亮点在闪闪发光。</p>
-            <p class="pbold">9、If there is anything you need, I will not be far away.</p>
-            <p>只要你需要，我就在这里。</p>
-            <p class="pbold">10、I am a man of my word.</p>
-            <p>我是信守承诺的人。</p>
-            <p class="pbold">11、There is one small step for a man,a giant leap for mankind.</p>
-            <p>某人的一小步就是人类的一大步。</p>
-            <p class="pbold">1、Life was like a box of chocolates, you never know what you're going to get.</p>
-            <p>生命就像一盒巧克力，结果往往出人意料。</p>
-            <p class="pbold">2、Stupid is as stupid does.</p>
-            <p>蠢人做蠢事，也可理解为傻人有傻福。</p>
-            <p class="pbold">3、Miracles happen every day.</p>
-            <p>奇迹每天都在发生。</p>
-            <p class="pbold">4、it made me look like a duck in water.</p>
-            <p>它让我如鱼得水。</p>
-            <p class="pbold">5、I don't know if we each have a destiny, or if we're all just floating around accidental—like on a breeze.</p>
-            <p>我不懂我们是否有着各自的命运，还是只是到处随风飘荡。</p>
-            <p class="pbold">6、Death is just a part of life, something we're all destined to do.</p>
-            <p>死亡是生命的一部分，是我们注定要做的一件事。</p>
-            <p class="pbold">7、You have got to put the past behind you before you can move on.</p>
-            <p>放下包袱，继续前进。</p>
-            <p class="pbold">8、It was like just before the sun goes to bed down on the bayou. There was a million sparkles on the river.</p>
-            <p>就像太阳在落山前映射在河口上，有无数的亮点在闪闪发光。</p>
-            <p class="pbold">9、If there is anything you need, I will not be far away.</p>
-            <p>只要你需要，我就在这里。</p>
-            <p class="pbold">10、I am a man of my word.</p>
-            <p>我是信守承诺的人。</p>
-            <p class="pbold">11、There is one small step for a man,a giant leap for mankind.</p>
-            <p>某人的一小步就是人类的一大步。</p>
-            <p class="pbold">1、Life was like a box of chocolates, you never know what you're going to get.</p>
-            <p>生命就像一盒巧克力，结果往往出人意料。</p>
-            <p class="pbold">2、Stupid is as stupid does.</p>
-            <p>蠢人做蠢事，也可理解为傻人有傻福。</p>
-            <p class="pbold">3、Miracles happen every day.</p>
-            <p>奇迹每天都在发生。</p>
-            <p class="pbold">4、it made me look like a duck in water.</p>
-            <p>它让我如鱼得水。</p>
-            <p class="pbold">5、I don't know if we each have a destiny, or if we're all just floating around accidental—like on a breeze.</p>
-            <p>我不懂我们是否有着各自的命运，还是只是到处随风飘荡。</p>
-            <p class="pbold">6、Death is just a part of life, something we're all destined to do.</p>
-            <p>死亡是生命的一部分，是我们注定要做的一件事。</p>
-            <p class="pbold">7、You have got to put the past behind you before you can move on.</p>
-            <p>放下包袱，继续前进。</p>
-            <p class="pbold">8、It was like just before the sun goes to bed down on the bayou. There was a million sparkles on the river.</p>
-            <p>就像太阳在落山前映射在河口上，有无数的亮点在闪闪发光。</p>
-            <p class="pbold">9、If there is anything you need, I will not be far away.</p>
-            <p>只要你需要，我就在这里。</p>
-            <p class="pbold">10、I am a man of my word.</p>
-            <p>我是信守承诺的人。</p>
-            <p class="pbold">11、There is one small step for a man,a giant leap for mankind.</p>
-            <p>某人的一小步就是人类的一大步。</p>
-            <p class="pbold">1、Life was like a box of chocolates, you never know what you're going to get.</p>
-            <p>生命就像一盒巧克力，结果往往出人意料。</p>
-            <p class="pbold">2、Stupid is as stupid does.</p>
-            <p>蠢人做蠢事，也可理解为傻人有傻福。</p>
-            <p class="pbold">3、Miracles happen every day.</p>
-            <p>奇迹每天都在发生。</p>
-            <p class="pbold">4、it made me look like a duck in water.</p>
-            <p>它让我如鱼得水。</p>
-            <p class="pbold">5、I don't know if we each have a destiny, or if we're all just floating around accidental—like on a breeze.</p>
-            <p>我不懂我们是否有着各自的命运，还是只是到处随风飘荡。</p>
-            <p class="pbold">6、Death is just a part of life, something we're all destined to do.</p>
-            <p>死亡是生命的一部分，是我们注定要做的一件事。</p>
-            <p class="pbold">7、You have got to put the past behind you before you can move on.</p>
-            <p>放下包袱，继续前进。</p>
-            <p class="pbold">8、It was like just before the sun goes to bed down on the bayou. There was a million sparkles on the river.</p>
-            <p>就像太阳在落山前映射在河口上，有无数的亮点在闪闪发光。</p>
-            <p class="pbold">9、If there is anything you need, I will not be far away.</p>
-            <p>只要你需要，我就在这里。</p>
-            <p class="pbold">10、I am a man of my word.</p>
-            <p>我是信守承诺的人。</p>
-            <p class="pbold">11、There is one small step for a man,a giant leap for mankind.</p>
-            <p>某人的一小步就是人类的一大步。</p>
-            <p class="pbold">1、Life was like a box of chocolates, you never know what you're going to get.</p>
-            <p>生命就像一盒巧克力，结果往往出人意料。</p>
-            <p class="pbold">2、Stupid is as stupid does.</p>
-            <p>蠢人做蠢事，也可理解为傻人有傻福。</p>
-            <p class="pbold">3、Miracles happen every day.</p>
-            <p>奇迹每天都在发生。</p>
-            <p class="pbold">4、it made me look like a duck in water.</p>
-            <p>它让我如鱼得水。</p>
-            <p class="pbold">5、I don't know if we each have a destiny, or if we're all just floating around accidental—like on a breeze.</p>
-            <p>我不懂我们是否有着各自的命运，还是只是到处随风飘荡。</p>
-            <p class="pbold">6、Death is just a part of life, something we're all destined to do.</p>
-            <p>死亡是生命的一部分，是我们注定要做的一件事。</p>
-            <p class="pbold">7、You have got to put the past behind you before you can move on.</p>
-            <p>放下包袱，继续前进。</p>
-            <p class="pbold">8、It was like just before the sun goes to bed down on the bayou. There was a million sparkles on the river.</p>
-            <p>就像太阳在落山前映射在河口上，有无数的亮点在闪闪发光。</p>
-            <p class="pbold">9、If there is anything you need, I will not be far away.</p>
-            <p>只要你需要，我就在这里。</p>
-            <p class="pbold">10、I am a man of my word.</p>
-            <p>我是信守承诺的人。</p>
-            <p class="pbold">11、There is one small step for a man,a giant leap for mankind.</p>
-            <p>某人的一小步就是人类的一大步。</p>
-        </div>
-    </div>
-
-    <script>
-        (function (){
-            var oBox = document.getElementById("box"),
-                oBar = document.getElementById("bar"),
-                oCon = document.getElementById("content"),
-                oScr = document.getElementById("scroll");
-
-            oBar.style.height = (oBox.clientHeight / oBox.scrollHeight)*oBox.clientHeight + "px";
-
-            var barMin = 0,
-                barMax = oBox.clientHeight - oBar.clientHeight,
-                conMin = 0,
-                conMax = oBox.scrollHeight - oBox.clientHeight;
-
-
-
-            //阻止复制文字,阻止默认事件
-            document.onselectstart = function (){ return false };
-
-            //给bar添加拖拽事件
-            addEvent(oBar , "mousedown" , function (e){
-                e = e || window.event;
-                var dY = e.clientY;
-                var dTop = this.offsetTop;//得到按下时bar的top值
-                var This = this;
-
-                addEvent(document , "mousemove" , move);
-                addEvent(document , "mouseup" , up);
-
-                //移动方法
-                function move(e){
-                    e = e || window.event;
-                    var mY = e.clientY;
-
-                    //bar当前的top值 = 按下的top值 + 鼠标垂直变化量
-                    var top = dTop + (mY - dY);
-
-                    //判断bar边界
-                    top = Math.max(top , barMin);
-                    top = Math.min(top , barMax);
-                    This.style.top = top + "px";
-
-                    //得到当前bar的top值在bar的总运动范围下的比例
-                    var prop = top / barMax;
-                    //通过prop的比例值,计算content应该运动多少
-                    var conTop = -prop * conMax;
-                    oCon.style.top = conTop + "px";
-                };
-                function up(){
-                    removeEvent(this, "mousemove" , move);
-                };
-            });
-            //添加滚轮事件
-            addEvent(oBox , "mousewheel" , function (e , d){
-                var t = d*130; //往回拉30  往上推-30
-                var top = oCon.offsetTop - t;
-                //判断oCon边界
-                top = Math.max(-conMax , top);
-                top = Math.min(0 , top);
-                oCon.style.top = top + "px";
-                oBar.style.top = (-top/conMax)*barMax + "px";
-
-                e.preventDefault();
-            });
-
-            addEvent(oScr , "click" , function (e){
-                e = e || window.event;
-                var nowY = e.clientY,
-                    top = nowY - docTop(oBox) - oBar.clientHeight/2;
-                //判断bar边界
-                top = Math.max(top , barMin);
-                top = Math.min(top , barMax);
-                oBar.style.top = top + "px";
-
-                //得到当前bar的top值在bar的总运动范围下的比例
-                var prop = top / barMax;
-                //通过prop的比例值,计算content应该运动多少
-                var conTop = -prop * conMax;
-                oCon.style.top = conTop + "px";
-            });
-            //取消bar的点击冒泡
-            addEvent(oBar , "click" , function (e){
-                e = e || window.event;
-                e.cancelBubble = true;
-            });
-        })();
-
-        //添加事件
-        function addEvent(obj , eName , eFn){
-            if(eName === "mousewheel"){
-                obj.attachEvent?obj.attachEvent("onmousewheel" , Fn):obj.addEventListener("mousewheel" , Fn , false);
-                document.addEventListener && obj.addEventListener("DOMMouseScroll" , Fn);
-                function Fn(e){
-                    e = e || window.event;
-                    var d = -e.wheelDelta/120 || e.detail/3;
-                    eFn.call(this,e,d);
-                }
-            }else{
-                if(obj.attachEvent){
-                    obj.attachEvent("on"+eName , eFn);//ie8-
-                }else{
-                    obj.addEventListener(eName , eFn , false);//兼容标准浏览器
-                };
-            };
-        }
-
-        //移除事件
-        function removeEvent(obj , eName , eFn){
-            if(obj.attachEvent){
-                obj.detachEvent("on"+eName , eFn);
-            }else{
-                obj.removeEventListener(eName , eFn);
-            };
-        };
-
-        //获取元素到可是区顶部的距离
-        function docTop(obj){
-            var sTop = 0;
-            while( obj !== document.body){
-                sTop += obj.offsetTop;//累加所有定位父级的top距离,直到body为止
-                obj = obj.offsetParent;
-            };
-            //返回获取的到定位父级的滚动高度 - 当前滚动的高度 = 当前元素到窗口的距离
-            return sTop -(document.documentElement.scrollTop || document.body.scrollTop);
-        };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    </script>
+<p class="text">本人从事Java开发工程师已经有:</p>
+<p><span></span></p>
+<script>
+    var oSpan = document.getElementsByTagName('span')[0];
+    function tow(n) {
+        return n >= 0 && n < 10 ? '0' + n : '' + n;
+    }
+    function getDate() {
+        var oDate = new Date();//获取日期对象
+        var oldTime = oDate.getTime();//现在距离1970年的毫秒数
+        var newDate = new Date('2018/5/28 00:00:00').getTime();
+        // var newTime = newDate.getTime();//2019年距离1970年的毫秒数
+        var second = Math.floor((oldTime - newDate) / 1000);//未来时间距离现在的秒数
+        var day = Math.floor(second / 86400);//整数部分代表的是天；一天有24*60*60=86400秒 ；
+        second = second % 86400;//余数代表剩下的秒数；
+        var hour = Math.floor(second / 3600);//整数部分代表小时；
+        second %= 3600; //余数代表 剩下的秒数；
+        var minute = Math.floor(second / 60);
+        second %= 60;
+        var str = tow(day) + '<span class="time">天</span>'
+            + tow(hour) + '<span class="time">小时</span>'
+            + tow(minute) + '<span class="time">分钟</span>'
+            + tow(second) + '<span class="time">秒</span>';
+        oSpan.innerHTML = str;
+    }
+    getDate();
+    setInterval(getDate, 1000);
+</script>
 </body>
 </html>
