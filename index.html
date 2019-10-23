@@ -398,6 +398,12 @@
                 transform: scale(0.3) rotate(-90deg);
             }
         }
+        #aa {
+            height:auto;
+            width:520px;
+            margin:auto;
+        }
+
         /**/
     </style>
 </head>
@@ -407,7 +413,10 @@
 <!---->
 <div class="text">
     <!--<h1>颜色、位置、大小都是可以控制的</h1>-->
-    <h3>愿我如星君如月，夜夜流光相皎洁</h3>
+    <p id="aa"></p>
+    <div style="display:none" id="w">
+        愿我如星君如月，夜夜流光相皎洁
+    </div>
     <p><span></span></p>
 </div>
 
@@ -656,14 +665,23 @@
         second %= 3600; //余数代表 剩下的秒数；
         var minute = Math.floor(second / 60);
         second %= 60;
-        var str = time(day) + '<span class="time">天</span>'
+        var str = '<span class="time">YY,喜欢你已经有</span>'+time(day) + '<span class="time">天</span>'
             + time(hour) + '<span class="time">小时</span>'
             + time(minute) + '<span class="time">分钟</span>'
-            + time(second) + '<span class="time">秒</span>';
+            + time(second) + '<span class="time">秒了</span>';
         oSpan.innerHTML = str;
     }
     getDate();
     setInterval(getDate, 1000);
+    //打字
+    var index = 0;
+    var word = document.getElementById("w").innerHTML;
+    console.log(word)
+
+    function type() {
+        document.getElementById("aa").innerText = word.substring(0, index++);
+    }
+    setInterval(type, 200);
 </script>
 </body>
 </html>
