@@ -398,7 +398,9 @@
         }
         #aa {
             height:auto;
-            width:520px;
+            /*width:520px;*/
+            width:100%;
+            text-align: center;
             font-size:14px;
             margin:auto;
         }
@@ -499,11 +501,10 @@
 </head>
 <body>
 <div class="textcontent">
-    <!--<h1>颜色、位置、大小都是可以控制的</h1>-->
     <p><span></span></p>
     <p id="aa"></p>
     <div style="display:none" id="w">
-        你不知道你的影子多么调皮， 总在我的眼前晃动，让我不能有一刻安宁。坏男孩从早上睁开朦胧眼睛的那一刻起，到枕着你的名字入眠进入梦乡，你的影子一直陪着我。 你并不是什么地方都好，你只是什么地方都让我忘不了，我也不是什么地方都坏，只是我愿意为你把坏的地方更改，人无完人，我要感谢上天给我与你相遇的幸运，心有真心，让我们一起走进向往中的春。 花开了，我就画花。 花谢了，我就画我自己。 你来了，我当然画你。 你走了，我就画一画回忆。 愿我如星君如月，夜夜流光相皎洁
+        你不知道你的影子多么调皮，总在我的眼前晃动，让我不能有一刻安宁。坏男孩从早上睁开朦胧眼睛的那一刻起，到枕着你的名字入眠进入梦乡，你的影子一直陪着我。 你并不是什么地方都好，你只是什么地方都让我忘不了，我也不是什么地方都坏，只是我愿意为你把坏的地方更改，人无完人，我要感谢上天给我与你相遇的幸运，心有真心，让我们一起走进向往中的春。 花开了，我就画花。 花谢了，我就画我自己。 你来了，我当然画你。 你走了，我就画一画回忆。 愿我如星君如月，夜夜流光相皎洁
     </div>
 </div>
 
@@ -752,7 +753,7 @@
         second %= 3600; //余数代表 剩下的秒数；
         var minute = Math.floor(second / 60);
         second %= 60;
-        var str = '<span class="time">YY,喜欢你已经有</span>'+time(day) + '<span class="time">天</span>'
+        var str = '<span class="time">1024多么有意义的日子,YY,喜欢你已经有</span>'+time(day) + '<span class="time">天</span>'
             + time(hour) + '<span class="time">小时</span>'
             + time(minute) + '<span class="time">分钟</span>'
             + time(second) + '<span class="time">秒了</span>';
